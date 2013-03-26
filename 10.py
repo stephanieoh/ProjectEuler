@@ -9,7 +9,7 @@ def isprime(n):
 	elif n==2:
 		return True
 	else:
-		for x in range(2, int(math.ceil(math.sqrt(n)))+1):
+		for x in xrange(2, int(math.ceil(math.sqrt(n)))+1):
 			if n%x==0:
 				return False
 	return True
