@@ -1,6 +1,7 @@
 import math
 
-def primef(n,l):
+def primef(n):
+	l = [];
 	m=n;
 	i=2;
 	while i<=int(math.ceil(math.sqrt(n)))+1:
@@ -13,36 +14,27 @@ def primef(n,l):
 		l.append(n)
 	return l
 
-def divisorsf(n,l):
+def divisorsf(n):
 	r=[];
 	m=0;
-	p=0;
-	primef(n,l)
-	print len(l)
+	p=1;
+ 	l = primef(n)
 	for x in xrange(0,len(l)-1):
 		m+=1
 		if l[x]!=l[x+1]:
 			r.append(m+1)
 			m=0;
+	r.append(m+2)
 	for x in xrange(0,len(r)):
 		p*=r[x]
 	return p
 
 
-
-
-
-l=[];
-n=1;
-while len(l)<=5:
-	l=[];
-	T=n*(n+1)/2
-	divisorsf(T,l)
+target=500
+n=1
+T=1
+while divisorsf(T) < target:
 	n+=1
-
-print T
-print l
-
-
-
-
+	T=n*(n+1)/2
+	if divisorsf(T) >= target:
+		print T
