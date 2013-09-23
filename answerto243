@@ -1,0 +1,7 @@
+
+frederick@rhino:~$ echo 'butts' | md5
+f9d7ad010bf7da58b927a0f30070b092  -
+
+
+frederick@rhino:~$ echo 'answer' | md5
+b1467cfbe3776a63800e439cfb057b19  -
