@@ -25,14 +25,14 @@ def findFirstTrueThenSetAppropFalse(list, j):
 def primecache(n):
 	list = [True for x in range(n)]
 	list[0] = False
-	i = 0
+	i = 1
 
 	while i < int(math.ceil(math.sqrt(n))):
 		#list = setFalse(list, findFirstTrue(list, i+1)+1)
 		j = i + 1
-		while not list[j]:
-			j += 1
-		j += 1
+		# while not list[j]:
+		# 	j += 1
+		# j += 1
 		
 		count = j 
 		while j - 1 < len(list) - count:
